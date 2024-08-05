@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'element.scss';
+
+:root {
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', Arial,
+		sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	margin: 0;
+	padding: 0;
+	color: #323233;
+	background-color: var(--theme-bg);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--header-height: 68px;
+	--side-bar-width: 240px;
+	--side-bar-collapse-width: 64px;
+	--el-color-primary: var(--theme);
+	--el-color-warning: var(--orange);
+	--el-color-danger: var(--red);
+	--el-color-success: var(--green);
+	--el-color-info: var(--gray);
+	--el-menu-text-color: var(--black6);
+	--el-border-color: #eee;
+	--el-border-color-hover: #dcdcdc;
+	// 背景色
+	--theme-bg: #f6f6f6;
+	// 主题色
+	--theme: #4965f2;
+	//主要文字颜色
+	--black3: #333;
+	// 次要文字颜色
+	--black6: #666;
+	// 辅助性文字颜色
+	--black9: #999;
+	// 颜色
+	--white: #fff;
+	--green: #00b246;
+	--red: #fa2c19;
+	--orange: #fca700;
+	--blue: #39b2ff;
+	--gray: #909196;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: 0;
+	word-break: break-all;
+}
+
+#__SSR_APP_UI__ {
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.03);
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+	border-radius: 4px;
+}
+
+pre {
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.page-content {
+	min-height: 100%;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: var(--white);
+}
