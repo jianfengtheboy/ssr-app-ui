@@ -70,16 +70,16 @@ Nuxt3 PC 端模板（兼容多种布局模式）
 
 #### 5.1、主要技术
 
--1、nuxt@^3.6.5
--2、vue@^3.3.4
--3、element-plus@^2.3.8
--4、@pinia/nuxt@^0.4.11
--5、@pinia-plugin-persistedstate/nuxt@^1.1.1
--6、typescript@^5.1.6
--7、tailwindcss@^3.3.3
--8、sass@^1.64.0
--9、postcss@^8.4.26
--10、nuxt-lodash@^2.5.0
+- 1、nuxt@^3.6.5
+- 2、vue@^3.3.4
+- 3、element-plus@^2.3.8
+- 4、@pinia/nuxt@^0.4.11
+- 5、@pinia-plugin-persistedstate/nuxt@^1.1.1
+- 6、typescript@^5.1.6
+- 7、tailwindcss@^3.3.3
+- 8、sass@^1.64.0
+- 9、postcss@^8.4.26
+- 10、nuxt-lodash@^2.5.0
 
 #### 5.2、项目结构
 
@@ -116,36 +116,36 @@ Nuxt3 PC 端模板（兼容多种布局模式）
 
 #### 6.1、assets 目录
 
--1、icons：全局 svg 图统一纳管文件夹，可通过 BaseIcon 组件引用
--2、images：全局静态图片纳管文件夹
--3、styles：全局静态样式纳管文件夹
+- 1、icons：全局 svg 图统一纳管文件夹，可通过 BaseIcon 组件引用
+- 2、images：全局静态图片纳管文件夹
+- 3、styles：全局静态样式纳管文件夹
 
 #### 6.2、components 目录
 
--1、base：全局基础组件
--2、business：全局业务组件
+- 1、base：全局基础组件
+- 2、business：全局业务组件
 
 #### 6.3、composables 目录
 
--1、hooks：全局 hooks
---1.1、hooks/base：全局基础 hooks
---1.2、hooks/business：全局业务 hooks
+- 1、hooks：全局 hooks
+- 1.1、hooks/base：全局基础 hooks
+- 1.2、hooks/business：全局业务 hooks
 
--2、request：全局请求方法封装
---2.1、request/useHttp：基于 useFetch 请求方法的封装
---2、2、request/useRequest：基于$fetch API 的封装
+- 2、request：全局请求方法封装
+- 2.1、request/useHttp：基于 useFetch 请求方法的封装
+- 2、2、request/useRequest：基于$fetch API 的封装
 
 #### 6.4、layouts 目录
 
--1、default：默认布局，包含 header、sideBar 组件，主要应用于需要头部导航和左侧菜单栏的页面，例如系统管理模块
--2、fullscreen：全屏布局，不包含 header、sideBar 等组件，主要应用于全屏显示或需要额外自定义布局的页面，例如登录页
--3、grail：圣杯布局，包含 header 组件，主要应用于需要头部导航的页面，例如门户页面
+- 1、default：默认布局，包含 header、sideBar 组件，主要应用于需要头部导航和左侧菜单栏的页面，例如系统管理模块
+- 2、fullscreen：全屏布局，不包含 header、sideBar 等组件，主要应用于全屏显示或需要额外自定义布局的页面，例如登录页
+- 3、grail：圣杯布局，包含 header 组件，主要应用于需要头部导航的页面，例如门户页面
 
 #### 6.5、middleware 目录
 
 - 注意：全局中间件需要在文件名中加上 `.global` 后缀，在所有页面都执行，否则只在引用的页面执行
 
--1、router.global.ts：全局路由导航守卫
+- 1、router.global.ts：全局路由导航守卫
 
 #### 6.6、pages 目录
 
