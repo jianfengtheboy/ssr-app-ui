@@ -23,7 +23,7 @@ export const useHttp = (requestParams?: any): Promise<any> => {
 		const baseHeaders =
 			tokenCookie && tokenCookie.token
 				? {
-						Authorization: `Bearer ${tokenCookie.token}`,
+						Authorization: tokenCookie.token,
 						'Accept-Language': appStore.lang == 'zh' ? 'zh-CN,zh' : 'en-US,en',
 				  }
 				: {

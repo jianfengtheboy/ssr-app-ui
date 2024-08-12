@@ -7,6 +7,18 @@ const userInfo = computed(() => appStore.userInfo)
 const toHome = () => {
 	navigateTo('/welcome')
 }
+
+// 退出登录
+const onLogout = useConfirm({
+	title: '退出登录',
+	message: '请确认是否退出系统？',
+	description: '',
+	type: 'primary',
+	confirmType: 'delete',
+	onConfirm: async () => {
+		await appStore.logout()
+	},
+})
 </script>
 
 <template>
@@ -44,7 +56,7 @@ const toHome = () => {
 			</template>
 		</el-dropdown>
 		<el-divider direction="vertical" />
-		<el-link class="text-white logout-btn" :underline="false" @click="appStore.logout()">
+		<el-link class="text-white logout-btn" :underline="false" @click="onLogout">
 			<BaseIcon class="button-hover mx-1" :size="18" color="#fff">
 				<IconCustomExit />
 			</BaseIcon>

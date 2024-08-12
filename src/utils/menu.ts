@@ -33,6 +33,18 @@ export const getMenuIdUrl = (list: IMenu[]) => {
 	}, {})
 }
 
+export const getMenuNameUrl = (list: IMenu[]) => {
+	const appStore = useAppStore()
+	let key = appStore.lang == 'zh' ? 'name' : 'nameEn'
+	return list.reduce((pre, cur) => {
+		if (cur['url']) pre[cur[key]] = `${cur['url']}`
+		if (cur.children && cur.children.length > 0) {
+			Object.assign(pre, getMenuNameUrl(cur.children))
+		}
+		return pre
+	}, {})
+}
+
 /**
  * 获取树的所有节点的某个属性值
  */

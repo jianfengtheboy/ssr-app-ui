@@ -18,7 +18,7 @@ const fetch = $fetch.create({
 		const tokenCookie: any = useCookie(`${storagePrefix}APPSTORE_TOKEN`).value
 		options.headers = new Headers(options.headers)
 		if (tokenCookie && tokenCookie.token) {
-			options.headers.set('Authorization', `Bearer ${tokenCookie.token}`)
+			options.headers.set('Authorization', tokenCookie.token)
 		}
 		options.headers.set('Accept-Language', appStore.lang == 'zh' ? 'zh-CN,zh' : 'en-US,en')
 	},

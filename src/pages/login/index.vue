@@ -23,7 +23,7 @@ const formRef = ref<FormInstance>()
 const submitLoading = ref(false)
 const showPassword = ref(true)
 const formData = ref({
-	userAccount: '',
+	username: '',
 	password: '',
 	captcha: '', // 验证码
 	uuid: '', // 验证码对应的key
@@ -31,7 +31,7 @@ const formData = ref({
 })
 
 const formRule = {
-	userAccount: [{ required: true, message: '请输入用户名', trigger: 'change' }],
+	username: [{ required: true, message: '请输入用户名', trigger: 'change' }],
 	password: [{ required: true, message: '请输入密码', trigger: 'change' }],
 	captcha: [{ required: true, message: '请输入验证码', trigger: 'change' }],
 }
@@ -43,7 +43,9 @@ const handleLogin = () => {
 		try {
 			submitLoading.value = true
 			const params = _.cloneDeep(formData.value)
-			let response: any = await getUserSalt(params.userAccount)
+			let response: any = await getUserSalt({
+				name: params.username,
+			})
 			if (!response) {
 				throw '用户名密码错误'
 			}
@@ -64,8 +66,8 @@ const captchaImage = ref('')
 const loadCaptcha = async () => {
 	try {
 		const response: any = await getCatcha()
-		const { image, key } = response
-		formData.value.uuid = key
+		const { image, uuid } = response
+		formData.value.uuid = uuid
 		captchaImage.value = image || `data:image/gif;base64,${image}`
 	} catch (error) {}
 }
@@ -93,8 +95,8 @@ onMounted(() => {
 						<span class="login-systemname font-bold whitespace-nowrap">{{ SystemName }}</span>
 					</div>
 					<el-form ref="formRef" :model="formData" :rules="formRule">
-						<el-form-item prop="userAccount">
-							<el-input v-model="formData.userAccount" placeholder="请输入用户名" autofocus maxlength="64">
+						<el-form-item prop="username">
+							<el-input v-model="formData.username" placeholder="请输入用户名" autofocus maxlength="64">
 								<template #prefix>
 									<BaseIcon color="#000" :size="22">
 										<IconCustomAccountLine />

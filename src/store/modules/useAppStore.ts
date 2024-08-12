@@ -4,7 +4,7 @@ import { IUser, IMenu } from '~/model/common'
 import { storagePrefix } from '~/config/domain'
 import { ELang } from '~/config/enum'
 import { getCurrentLanguage } from '~/utils/common'
-import { filterMenus, getPermissions, getMenuIdUrl } from '~/utils/menu'
+import { filterMenus, getPermissions, getMenuIdUrl, getMenuNameUrl } from '~/utils/menu'
 import { clearCookie } from '~/utils/storage'
 import { onLogin, getUserInfo, getSysMenuNav, logout } from '~/apis/common'
 
@@ -21,6 +21,8 @@ interface IState {
 	menuIdUrl: Object
 	// url-id map
 	menuUrlId: Object
+	// url-path map
+	menuUrlName: Object
 	// 权限清单
 	permissions: string[]
 	// 当前选择的语言
@@ -39,15 +41,12 @@ export const useAppStore = defineStore('appStore', {
 			mobile: '',
 			userName: '',
 			sysMenus: [],
-			sysRoles: '',
-			createdTime: '',
-			companyId: 0,
-			defaultPwdFlag: '0',
-			defaultServerType: '',
+			sysRoles: [],
 		},
 		menuList: [],
 		menuIdUrl: {},
 		menuUrlId: {},
+		menuUrlName: {},
 		permissions: [],
 		lang: getCurrentLanguage(),
 		lastActivePath: '',
@@ -73,16 +72,17 @@ export const useAppStore = defineStore('appStore', {
 			storage: persistedState.localStorage,
 			paths: [
 				'userInfo.id',
-				'userInfo.userName',
+				'userInfo.email',
 				'userInfo.mobile',
-				'userInfo.companyId',
-				'userInfo.defaultServerType',
+				'userInfo.userName',
+				'userInfo.sysMenus',
+				'userInfo.sysRoles',
 			],
 		},
 		{
 			key: `${storagePrefix}APPSTORE_ROUTE`,
 			storage: persistedState.localStorage,
-			paths: ['lastActivePath', 'menuList', 'menuIdUrl', 'menuUrlId', 'permissions'],
+			paths: ['lastActivePath', 'menuList', 'menuIdUrl', 'menuUrlId', 'menuUrlName', 'permissions'],
 		},
 	],
 	actions: {
@@ -101,8 +101,8 @@ export const useAppStore = defineStore('appStore', {
 		},
 		// 登录
 		async login(data) {
-			const response: any = await onLogin(data)
-			this.token = response
+			const { token } = await onLogin(data)
+			this.token = token
 			this.lastActivePath = ''
 			// 设置请求头，注意：请使用 await, 否则无效
 			await useRequest.setHeader({
@@ -129,6 +129,7 @@ export const useAppStore = defineStore('appStore', {
 				const permissions = getPermissions(data)
 				this.menuList = menuList
 				this.menuIdUrl = getMenuIdUrl(_.cloneDeep(menuList))
+				this.menuUrlName = getMenuNameUrl(menuList)
 				this.menuUrlId = _.invert(this.menuIdUrl)
 				this.permissions = permissions
 			}

@@ -1,6 +1,17 @@
 import { h, AppContext, isVNode } from 'vue'
 import { ElMessage, MessageParams, ElMessageBox } from 'element-plus'
 import IconLoading from '~icons/custom/loading'
+import { storagePrefix } from '~/config/domain'
+import { getCurrentLanguage } from '@/utils/common'
+
+// 获取localStorage中缓存的语言设置
+const getStoreLang = () => {
+	let store: any = useCookie(`${storagePrefix}APPSTORE_LANGUAGE`).value
+	if (store) {
+		return store.lang
+	}
+	return ''
+}
 
 const info = (options?: MessageParams, appContext?: AppContext | null) => {
 	ElMessage.closeAll()
@@ -9,7 +20,9 @@ const info = (options?: MessageParams, appContext?: AppContext | null) => {
 
 const success = (options?: MessageParams, appContext?: AppContext | null) => {
 	ElMessage.closeAll()
-	return ElMessage.success(options || '操作成功', appContext)
+	const lang = getStoreLang() || getCurrentLanguage()
+	const defaultMessage = lang === 'zh' ? '操作成功!' : 'Operation succeeded!'
+	return ElMessage.success(options || defaultMessage, appContext)
 }
 
 const warning = (options?: MessageParams, appContext?: AppContext | null) => {
@@ -44,9 +57,10 @@ const loading = (options?: MessageParams, appContext?: AppContext | null) => {
 
 const confirm = async function (title, type: any = 'warning') {
 	try {
-		await ElMessageBox.confirm(title, '提示', {
-			confirmButtonText: '确定',
-			cancelButtonText: '取消',
+		const lang = getStoreLang() || getCurrentLanguage()
+		await ElMessageBox.confirm(title, lang === 'zh' ? '提示' : 'Tip', {
+			confirmButtonText: lang === 'zh' ? '确定' : 'confirm',
+			cancelButtonText: lang === 'zh' ? '取消' : 'cancel',
 			type,
 		})
 		return Promise.resolve()

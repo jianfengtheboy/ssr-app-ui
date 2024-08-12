@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2023-08-29 16:05:02
- * @LastEditTime: 2024-08-05 22:32:58
+ * @LastEditTime: 2024-08-12 22:59:49
  * @Description: 基础模块接口
  */
 // 获取验证码图片
@@ -16,7 +16,7 @@ export const getUserSalt = data => useHttp({ url: '/sys/users/salt', body: { ...
 export const onLogin = data => useHttp({ url: '/sys/login', body: { ...data } })
 
 // 获取用户信息
-export const getUserInfo = () => useHttp({ url: '/sys/users/info' })
+export const getUserInfo = () => useRequest.post('/sys/users/info')
 
 // 退出
 export const logout = () => useHttp({ url: '/sys/logout' })
