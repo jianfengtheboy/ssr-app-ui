@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "antfu.unocss",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "ms-playwright.playwright",
+    "vitest.explorer",
+    "yoavbls.pretty-ts-errors",
+    "wix.vscode-import-cost",
+    "usernamehw.errorlens",
+    "Gruntfuggly.todo-tree",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

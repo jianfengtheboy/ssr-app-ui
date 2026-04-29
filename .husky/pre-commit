@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Run checks only on staged files before commit.
+pnpm exec lint-staged

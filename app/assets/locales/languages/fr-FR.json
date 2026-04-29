@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "products": "Produits",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "theme": {
+    "current": "Thème actuel : ",
+    "openMenu": "ouvrir le menu du thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "language": {
+    "current": "Langue actuelle : ",
+    "openMenu": "ouvrir le menu de langue"
+  },
+  "home": {
+    "hero": {
+      "title": "Solutions Globales de Vente",
+      "subtitle": "Technologie innovante pour les marchés internationaux",
+      "cta_primary": "Commencer",
+      "cta_secondary": "En Savoir Plus"
+    }
+  }
+}

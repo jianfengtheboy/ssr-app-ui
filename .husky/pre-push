@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Run full quality checks before push.
+pnpm run check

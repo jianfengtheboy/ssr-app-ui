@@ -1,0 +1,51 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{json,jsonc}]
+indent_style = space
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.{css,scss,sass,less,styl}]
+indent_style = space
+indent_size = 2
+
+[*.{js,jsx,ts,tsx,mjs,cjs}]
+indent_style = space
+indent_size = 2
+
+[*.vue]
+indent_style = space
+indent_size = 2
+
+[*.html]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[Dockerfile]
+indent_style = space
+indent_size = 4
+
+[*.sql]
+indent_style = space
+indent_size = 4
+
+[*.{sh,bash}]
+indent_style = space
+indent_size = 2

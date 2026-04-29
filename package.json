@@ -1,0 +1,66 @@
+{
+  "name": "xmai-vending",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "format": "prettier --write app types .vscode nuxt.config.ts eslint.config.mjs package.json README.md",
+    "format:check": "prettier --check app types .vscode nuxt.config.ts eslint.config.mjs package.json README.md",
+    "lint": "eslint app types nuxt.config.ts eslint.config.mjs --cache --cache-location .cache/eslint --fix",
+    "lint:check": "eslint app types nuxt.config.ts eslint.config.mjs --cache --cache-location .cache/eslint --max-warnings 0",
+    "check": "pnpm format:check && pnpm lint:check",
+    "check:fix": "pnpm format && pnpm lint"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,vue,css,scss,html,json,jsonc,yaml,yml,md}": [
+      "prettier --write"
+    ],
+    "*.{js,mjs,cjs,ts,tsx,vue}": [
+      "eslint --cache --cache-location .cache/eslint --fix --max-warnings 0"
+    ]
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
+    "aos": "^2.3.4",
+    "dayjs": "^1.11.20",
+    "nuxt": "^4.4.2",
+    "pinia": "^3.0.4",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.32",
+    "vue-router": "^5.0.4",
+    "yup": "^1.7.1"
+  },
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@formkit/nuxt": "^2.0.0",
+    "@nuxt/icon": "^2.2.1",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/i18n": "^10.3.0",
+    "@nuxtjs/robots": "6.0.8",
+    "@nuxtjs/sitemap": "8.0.14",
+    "@pinia/nuxt": "^0.11.3",
+    "@tailwindcss/vite": "4.1.18",
+    "@types/aos": "^3.0.7",
+    "@typescript-eslint/parser": "^8.59.0",
+    "@vueuse/nuxt": "^14.2.1",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "10.9.0",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.4",
+    "nuxt-gtag": "^4.1.0",
+    "nuxt-swiper": "^2.0.1",
+    "prettier": "^3.8.3",
+    "tailwindcss": "4.1.18",
+    "vue-eslint-parser": "^10.4.0"
+  }
+}

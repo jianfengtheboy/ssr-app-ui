@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "products": "Productos",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse"
+  },
+  "theme": {
+    "current": "Tema actual: ",
+    "openMenu": "abrir menú de tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "current": "Idioma actual: ",
+    "openMenu": "abrir menú de idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Soluciones Globales de Vending",
+      "subtitle": "Tecnología innovadora para mercados internacionales",
+      "cta_primary": "Comenzar",
+      "cta_secondary": "Aprender Más"
+    },
+    "features": {
+      "title": "Por qué Elegir XMAI",
+      "items": {
+        "global": {
+          "title": "Alcance Global",
+          "description": "Atendiendo clientes en 50+ países"
+        },
+        "technology": {
+          "title": "Tecnología Inteligente",
+          "description": "Soluciones de vending con IoT"
+        },
+        "security": {
+          "title": "Seguro y Confiable",
+          "description": "Seguridad de grado empresarial"
+        }
+      }
+    }
+  }
+}

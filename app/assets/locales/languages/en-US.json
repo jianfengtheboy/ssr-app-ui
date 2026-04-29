@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "theme": {
+    "current": "Current theme: ",
+    "openMenu": "open theme menu",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "current": "Current language: ",
+    "openMenu": "open language menu"
+  },
+  "home": {
+    "hero": {
+      "title": "Global Vending Solutions",
+      "subtitle": "Innovative technology for international markets",
+      "cta_primary": "Get Started",
+      "cta_secondary": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose XMAI",
+      "items": {
+        "global": {
+          "title": "Global Reach",
+          "description": "Serving clients in 50+ countries"
+        },
+        "technology": {
+          "title": "Smart Technology",
+          "description": "IoT-enabled vending solutions"
+        },
+        "security": {
+          "title": "Secure & Reliable",
+          "description": "Enterprise-grade security"
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "close": "Close",
+    "submit": "Submit",
+    "next": "Next",
+    "back": "Back",
+    "continue": "Continue",
+    "finish": "Finish",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "apply": "Apply"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our global team",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company",
+      "country": "Country",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Thank you! We'll contact you within 24 hours.",
+      "error": "Failed to send message. Please try again."
+    }
+  }
+}
