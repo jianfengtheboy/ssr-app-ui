@@ -1,4 +1,4 @@
-export const UI_STORE_PERSIST_KEY = 'XMAI_Vending_UI_SSR'
+export const UI_STORE_PERSIST_KEY = 'SSR_APP_UI_THEME'
 export const THEME_FIELD = 'theme'
 
 export function getThemePreloadScript() {

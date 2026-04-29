@@ -121,7 +121,7 @@
     "tailwindcss",
     "vee",
     "vueuse",
-    "xmai"
+    "SSR_APP_UI"
   ],
   "i18n-ally.localesPaths": ["app/assets/locales", "app/assets/locales/languages"]
 }

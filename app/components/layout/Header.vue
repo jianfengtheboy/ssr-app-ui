@@ -10,7 +10,7 @@
         >
           <img
             src="https://xmaivending.com/wp-content/uploads/2026/03/logo-1.png"
-            alt="XMAI Vending"
+            alt="SSR_APP_UI"
             class="h-5 w-auto"
           />
         </NuxtLink>

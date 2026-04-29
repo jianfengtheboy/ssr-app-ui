@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   // @nuxtjs/sitemap / @nuxtjs/robots 依赖站点绝对地址
   site: {
-    url: 'https://xmaivending.com',
+    url: 'https://SSR_APP_UI.com',
   },
   // 兼容性设置
   compatibilityDate: '2025-07-15',
@@ -41,8 +41,8 @@ export default defineNuxtConfig({
   // 应用配置
   app: {
     head: {
-      titleTemplate: '%s | XMAI Boost your sales and profits',
-      title: 'XMAI Boost your sales and profits',
+      titleTemplate: '%s | SSR APP UI',
+      title: 'SSR APP UI',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',
       meta: [
@@ -70,10 +70,10 @@ export default defineNuxtConfig({
           rel: 'apple-touch-icon',
           href: 'https://xmaivending.com/wp-content/uploads/2026/03/cropped-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260323170806_192_11343-180x180.png',
         },
-        { rel: 'dns-prefetch', href: 'https://xmaivending.com/' },
+        { rel: 'dns-prefetch', href: 'https://SSR_APP_UI.com/' },
       ],
       bodyAttrs: {
-        class: 'xmai-vending',
+        class: 'ssr-app-ui',
       },
       script: [
         {
@@ -88,8 +88,8 @@ export default defineNuxtConfig({
   // 运行时配置
   runtimeConfig: {
     public: {
-      siteUrl: 'https://xmaivending.com/',
-      contactEmail: 'guts@xmaivending.com',
+      siteUrl: 'https://SSR_APP_UI.com/',
+      contactEmail: 'guts@SSR_APP_UI.com',
       supportPhone: '+1 8165537029',
       defaultLocale: 'en',
     },
@@ -99,7 +99,6 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
-        // i18n v10: langDir / vueI18n 默认相对 restructureDir（默认是 i18n）
         restructureDir: 'app/assets/locales',
         strategy: 'no_prefix',
         defaultLocale: 'en',
@@ -111,7 +110,7 @@ export default defineNuxtConfig({
         langDir: 'languages',
         detectBrowserLanguage: {
           useCookie: true,
-          cookieKey: 'XMAI_Vending_Language_SSR',
+          cookieKey: 'SSR_APP_UI_LANGUAGE',
           redirectOn: 'root',
           alwaysRedirect: false,
         },

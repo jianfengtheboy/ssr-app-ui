@@ -4,7 +4,7 @@
     <section class="relative overflow-hidden bg-gray-50">
       <div class="container py-20 md:py-32">
         <div class="max-w-3xl" data-aos="fade-up">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6">About XMAI Vending</h1>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">About SSR_APP_UI</h1>
           <p class="text-xl text-gray-600">
             Leading the future of vending technology with innovation and excellence.
           </p>
@@ -23,7 +23,7 @@
               that enhance customer experiences and drive business growth worldwide.
             </p>
             <p class="text-lg text-gray-600">
-              Founded in 2018, XMAI Vending has grown to become a global leader in smart vending
+              Founded in 2018, SSR_APP_UI has grown to become a global leader in smart vending
               solutions, serving clients in over 50 countries.
             </p>
           </div>
@@ -31,7 +31,7 @@
             <div class="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="XMAI Office"
+                alt="SSR_APP_UI Office"
                 class="w-full h-auto"
               />
             </div>

@@ -63,7 +63,7 @@
       <div class="container text-center" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of businesses worldwide using XMAI vending solutions.
+          Join thousands of businesses worldwide using SSR_APP_UI solutions.
         </p>
         <NuxtLink to="/contact" class="btn btn-primary px-8 py-3 text-lg">
           Get Started Today
